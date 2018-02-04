@@ -1,0 +1,30 @@
+{
+  "name": "Simple-Node-Blog",
+  "version": "1.0.0",
+  "description": "A simple blogging platform written in node.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Que20/Simple-Node-Blog.git"
+  },
+  "keywords": [
+    "blog",
+    "nodejs",
+    "node"
+  ],
+  "author": "Kevin Maarek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Que20/Simple-Node-Blog/issues"
+  },
+  "homepage": "https://github.com/Que20/Simple-Node-Blog",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "nodemon": "^1.14.12"
+  }
+}
