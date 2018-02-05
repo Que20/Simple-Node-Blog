@@ -1,0 +1,14 @@
+<h1>Welcome!</h1>
+<h2>What a <%= adjective %> node blog :)</h2>
+<div class="post-list">
+  <div class="ui divided items">
+    <% if (locals.entries) { %>
+      <% for (entry of locals.entries) { %>
+        <%- include('../components/blog_entry', {post: entry}) %>
+      <% } %>
+    <% } %>
+  </div>
+</div>
+<div class="page-indicator">
+  <% include ../components/pager%>
+</div>

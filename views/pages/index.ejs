@@ -1,4 +1,16 @@
-<% include ../components/htmlBegins %>
-    <h1>Welcome!</h1>
-    <h2>What a <%= adjective %> node blog :)</h2>
-<% include ../components/htmlEnds %>
+<% include ../components/html_begins %>
+<% include ../components/header %>
+
+
+<div class="ui main container" id="blog">
+<div class="ui stackable grid">
+  <div class="eleven wide column">
+    <% include ../components/entry_list%>
+  </div>
+  <div class="five wide column">
+    <% include ../components/side_bar%>
+  </div>
+</div>
+</div>
+
+<% include ../components/html_ends %>

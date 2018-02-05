@@ -1,0 +1,28 @@
+<div class="item">
+  <!-- <div class="image">
+      <img src="/images/wireframe/image.png">
+  </div> -->
+  <div class="content">
+    <a class="header"><%= locals.post.title %>
+      <% if (locals.post.title === "Test first article") { %>
+      <a class="ui red tag label" style="margin-left:2em;">New</a>
+      <% } %>
+    </a>
+      <div class="meta">
+        <span>Date de publication : <%= locals.post.date %></span>
+      </div>
+    <div class="description">
+      <p>
+        <%= locals.post.intro %>
+      </p>
+    </div>
+    <div class="extra">
+      Keywords :
+      <div class="ui horizontal label">Test</div>
+      <div class="ui horizontal label">Some</div>
+      <% if (locals.post.title === "Test first article") { %>
+        <div class="ui horizontal label">Tag</div>
+      <% } %>
+    </div>
+  </div>
+</div>
