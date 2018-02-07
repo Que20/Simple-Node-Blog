@@ -1,14 +1,4 @@
-<h1>Welcome!</h1>
-<h2>What a <%= adjective %> node blog :)</h2>
-<div style="float:right;">
-Layout style
-  <div class="ui small basic icon buttons">
-    <button class="ui button"><i class="list layout icon"></i></button>
-    <button class="ui button"><i class="square icon"></i></button>
-  </div>
-</div>
-
-<div class="post-list">
+<div id="post-list" style="max-width:800px;">
   <div class="ui divided items">
     <% if (locals.entries) { %>
       <% for (entry of locals.entries) { %>
@@ -20,7 +10,4 @@ Layout style
       </div>
     <% } %>
   </div>
-</div>
-<div class="page-indicator">
-  <% include ../components/pager%>
 </div>

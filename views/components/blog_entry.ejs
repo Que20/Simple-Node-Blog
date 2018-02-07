@@ -1,28 +1,27 @@
-<div class="item">
-  <!-- <div class="image">
-      <img src="/images/wireframe/image.png">
-  </div> -->
+<div class="ui segment" style="margin-bottom:4em;">
+  <!-- TITLE -->
+  <h1 style="font-size:40px;"><%= locals.post.title %></h1>
+
+  <!-- DATE -->
+  <span style="color:gray;">Date de publication : <span style="font-weight: bold;"><%= locals.post.date %></span></span>
+  <% if (locals.post.title === "Test first article") { %>
+    <div class="ui red horizontal label">New</div>
+  <% } %>
+
+  <!-- CONTENT -->
   <div class="content">
-    <a class="header"><%= locals.post.title %>
-      <% if (locals.post.title === "Test first article") { %>
-      <a class="ui red tag label" style="margin-left:2em;">New</a>
-      <% } %>
-    </a>
-      <div class="meta">
-        <span>Date de publication : <%= locals.post.date %></span>
-      </div>
-    <div class="description">
-      <p>
-        <%= locals.post.intro %>
-      </p>
-    </div>
-    <div class="extra">
-      Keywords :
-      <div class="ui horizontal label">Test</div>
-      <div class="ui horizontal label">Some</div>
-      <% if (locals.post.title === "Test first article") { %>
-        <div class="ui horizontal label">Tag</div>
-      <% } %>
-    </div>
+    <p style="font-size:20px; margin-top:1em; margin-bottom:1em;">
+      <%= locals.post.intro %>
+    </p>
+  </div>
+
+  <!-- KEYWORDS -->
+  <div class="keywords">
+  Keywords :
+  <div class="ui horizontal label">Test</div>
+  <div class="ui horizontal label">Some</div>
+  <% if (locals.post.title === "Test first article") { %>
+    <div class="ui horizontal label">Tag</div>
+  <% } %>
   </div>
 </div>
