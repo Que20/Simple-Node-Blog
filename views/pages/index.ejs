@@ -1,39 +1,50 @@
 <% include ../components/html_begins %>
-
-<div class="ui stackable grid">
-  <div class="left floated three wide column" id="sidebar" style="background-color:black;">
-    <div class="ui rail" style="width:200px;clear:both;margin:0 auto;position:relative;">
-      <div class="ui sticky">
-        <div id="title">
-          <i class="red huge asterisk icon"></i>
-          <h1>Hello World!</h1>
+<!-- https://github.com/itamarst/semantic-sidebar-example/blob/master/javascripts/all.js -->
+<!-- Fixed sidebar for wide screens -->
+    <div class="ui vertical inverted visible fixed sidebar menu" id="toc">
+      <div id="title">
+        <i class="red huge asterisk icon"></i>
+        <h1>Hello World!</h1>
+      </div>
+      <div id="menu">
+        <div class="ui inverted link list">
+          <a class="item">Home</a>
+          <a class="item">About</a>
+          <a class="item">Jobs</a>
+          <a class="item">Team</a>
         </div>
-        <div id="menu">
-          <div class="ui inverted link list">
-            <a class="item">Home</a>
-            <a class="item">About</a>
-            <a class="item">Jobs</a>
-            <a class="item">Team</a>
+      </div>
+      <div id="social">
+        <button class="ui twitter button social">
+          <i class="twitter icon"></i>
+          Twitter
+        </button>
+        <button class="ui linkedin button social">
+          <i class="linkedin icon"></i>
+          LinkedIn
+        </button>
+      </div>
+    </div>
+
+    <div class="pusher" id="main-content">
+      <!-- Top bar and pop-in side menu for narrow screens -->
+      <div class="ui inverted top menu" id="top-menu">
+        <div class="ui container">
+          <a class="launch icon item" id="sidebar-menu-button">
+	            <i class="content icon"></i>
+          </a>
+          <div class="item">
+            Title goes here
           </div>
         </div>
-        <div id="social">
-          <button class="ui twitter button social">
-            <i class="twitter icon"></i>
-            Twitter
-          </button>
-          <button class="ui linkedin button social">
-            <i class="linkedin icon"></i>
-            LinkedIn
-          </button>
+      </div>
+      <div class="ui padded basic segment" id="main">
+        <br>
+        <p>Main content goes here.</p>
+        <p>Try resizing the page to see how the reactiveness works; get small enough and a top menu-bar shows up.</p>
+        <div class="ui main container">
+          <% include ../components/entry_list %>
         </div>
       </div>
     </div>
-  </div>
-  <div class="right floated twelve wide column">
-    <div class="ui main container">
-      <% include ../components/entry_list %>
-    </div>
-  </div>
-</div>
-
 <% include ../components/html_ends %>
