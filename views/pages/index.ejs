@@ -1,39 +1,38 @@
 <% include ../components/html_begins %>
-
-<div class="ui stackable grid">
-  <div class="left floated three wide column" id="sidebar" style="background-color:black;">
-    <div class="ui rail" style="width:200px;clear:both;margin:0 auto;position:relative;">
-      <div class="ui sticky">
-        <div id="title">
-          <i class="red huge asterisk icon"></i>
-          <h1>Hello World!</h1>
-        </div>
-        <div id="menu">
-          <div class="ui inverted link list">
-            <a class="item">Home</a>
-            <a class="item">About</a>
-            <a class="item">Jobs</a>
-            <a class="item">Team</a>
-          </div>
-        </div>
-        <div id="social">
-          <button class="ui twitter button social">
-            <i class="twitter icon"></i>
-            Twitter
-          </button>
-          <button class="ui linkedin button social">
-            <i class="linkedin icon"></i>
-            LinkedIn
-          </button>
+<div>
+    <!-- the sidebar -->
+    <div class="ui left vertical inverted labeled visible sidebar menu" id="sidebar">
+      <div id="title">
+        <i class="red huge asterisk icon"></i>
+        <h1>Hello World!</h1>
+      </div>
+      <div id="menu">
+        <div class="ui inverted link list">
+          <a class="item">Home</a>
+          <a class="item">About</a>
+          <a class="item">Jobs</a>
+          <a class="item">Team</a>
         </div>
       </div>
+      <div id="social">
+        <button class="ui twitter button social">
+          <i class="twitter icon"></i>
+          Twitter
+        </button>
+        <button class="ui linkedin button social">
+          <i class="linkedin icon"></i>
+          LinkedIn
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="right floated twelve wide column">
-    <div class="ui main container">
-      <% include ../components/entry_list %>
-    </div>
-  </div>
-</div>
+    <!-- //sidebar -->
 
+    <!-- the content -->
+    <div class="pusher" id="content">
+      <div class="ui main container">
+        <% include ../components/entry_list %>
+      </div>
+    </div>
+    <!-- //content -->
+</div>
 <% include ../components/html_ends %>
